@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Create /run files
+echo "ifupdown: creating file structure"
+mkdir -p /run/network
+touch /run/network/ifstate
+
+chown -R root:netdev /run/network
+
+# Start network
+echo "ifupdown: starting auto interfaces"
+ifup -a

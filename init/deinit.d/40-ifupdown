@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Stop the netork
+echo "ifupdown: stopping the network"
+ifdown -a
+
+# Delete file structure under /run
+echo "ifupdown: cleaning file structure"
+rm -rf /run/network
