@@ -1,3 +1,0 @@
-#!/bin/bash
-# Sending SIGTERM will prompt the init to restart
-kill -SIGTERM 1

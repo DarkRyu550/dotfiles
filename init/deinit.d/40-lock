@@ -1,5 +1,0 @@
-#!/bin/bash
-
-# Delete file structure under /run
-echo "lock: cleaning file structure"
-rm -rf /run/lock

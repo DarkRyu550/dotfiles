@@ -1,0 +1,145 @@
+sw_volume: 50
+audio_device_state:1:Music Player Daemon [PCH]
+audio_device_state:1:Music Player Daemon [HDMI]
+audio_device_state:1:mpd
+state: pause
+current: 105
+time: 2.194000
+random: 0
+repeat: 1
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:Rock/Boston/Boston/02 Peace of Mind.m4a
+1:Pop/Nena/Irgendwie, irgendwo, irgendwann/01 Irgendwie, irgendwo, irgendwann.m4a
+2:Pop/Lady Gaga/ARTPOP/03 G.U.Y.m4a
+3:Metal/Angra/Temple of Shadows/05 Wishing Well.m4a
+4:Eletrônica/Axwell Λ Ingrosso/More Than You Know/01 More Than You Know.m4a
+5:Metal/Dragonforce/Inhuman Rampage/01 Through the Fire and Flames.m4a
+6:Metal/Dragonforce/Inhuman Rampage/02 Revolution Deathsquad.m4a
+7:Metal/Dragonforce/Inhuman Rampage/03 Storming the Burning Fields.m4a
+8:Metal/Dragonforce/Inhuman Rampage/04 Operation Ground and Pound.m4a
+9:Metal/Dragonforce/Inhuman Rampage/05 Body Breakdown.m4a
+10:Metal/Dragonforce/Inhuman Rampage/07 The Flame of Youth.m4a
+11:Metal/Dragonforce/Inhuman Rampage/08 Trail of Broken Hearts.m4a
+12:Metal/Dragonforce/Inhuman Rampage/09 Lost Souls in Endless Time.m4a
+13:Metal/Dragonforce/Maximum Overload/1-02 Tomorrow's Kings.m4a
+14:Metal/Dragonforce/Maximum Overload/1-03 No More.m4a
+15:Metal/Dragonforce/Maximum Overload/1-04 Three Hammers.m4a
+16:Metal/Dragonforce/Maximum Overload/1-06 The Sun Is Dead.m4a
+17:Metal/Dragonforce/Maximum Overload/1-07 Defenders.m4a
+18:Metal/Dragonforce/Maximum Overload/1-09 City of Gold.m4a
+19:Metal/Dragonforce/Maximum Overload/1-11 Power and Glory.m4a
+20:Metal/Dragonforce/Maximum Overload/1-12 You're Not Alone.m4a
+21:Metal/Dragonforce/Maximum Overload/1-14 Summer's End.m4a
+22:Metal/Dragonforce/Maximum Overload/1-15 Fight to be Free.m4a
+23:Metal/Dragonforce/Sonic Firestorm/02 Fury of the Storm.m4a
+24:Metal/Dragonforce/Sonic Firestorm/03 Fields of Despair.m4a
+25:Metal/Dragonforce/Sonic Firestorm/04 Dawn Over a New World.m4a
+26:Metal/Dragonforce/Sonic Firestorm/05 Above the Winter Moonlight.m4a
+27:Metal/Dragonforce/Sonic Firestorm/06 Soldiers of the Wasteland.m4a
+28:Metal/Dragonforce/Sonic Firestorm/07 Prepare for War.m4a
+29:Metal/Dragonforce/Sonic Firestorm/08 Once in a Lifetime.m4a
+30:Metal/Dragonforce/The Power Within/01 Holding On.m4a
+31:Metal/Dragonforce/The Power Within/02 Fallen World.m4a
+32:Metal/Dragonforce/The Power Within/03 Cry Thunder.m4a
+33:Metal/Dragonforce/The Power Within/04 Give Me the Night.m4a
+34:Metal/Dragonforce/The Power Within/05 Wings of Liberty.m4a
+35:Metal/Dragonforce/The Power Within/06 Seasons.m4a
+36:Metal/Dragonforce/The Power Within/07 Heart of the Storm.m4a
+37:Metal/Dragonforce/The Power Within/09 Last Man Stands.m4a
+38:Metal/Dragonforce/The Power Within/10 Seasons (acoustic version).m4a
+39:Metal/Dragonforce/The Power Within/11 Power of the Ninja Sword.m4a
+40:Metal/Dragonforce/Ultra Beatdown/01 Heroes of Our Time.m4a
+41:Metal/Dragonforce/Ultra Beatdown/04 Heartbreak Armageddon.m4a
+42:Metal/Dragonforce/Ultra Beatdown/05 The Last Journey Home.m4a
+43:Metal/Dragonforce/Ultra Beatdown/06 A Flame for Freedom.m4a
+44:Metal/Dragonforce/Ultra Beatdown/08 The Warrior Inside.m4a
+45:Metal/Dragonforce/Ultra Beatdown/10 Scars of Yesterday.m4a
+46:Metal/Dragonforce/Ultra Beatdown/11 E.P.M..m4a
+47:Metal/Dragonforce/Valley of the Damned/1-02 Valley of the Damned.m4a
+48:Metal/Dragonforce/Valley of the Damned/1-03 Black Fire.m4a
+49:Metal/Dragonforce/Valley of the Damned/1-04 Black Winter Night.m4a
+50:Metal/Dragonforce/Valley of the Damned/1-05 Starfire.m4a
+51:Metal/Dragonforce/Valley of the Damned/1-08 Evening Star.m4a
+52:Metal/Dragonforce/Valley of the Damned/1-10 Where Dragons Rule.m4a
+53:Metal/Elvenking/Era/02 I Am the Monster.m4a
+54:Metal/Elvenking/Era/05 We, Animals.m4a
+55:Metal/Elvenking/Era/06 Through Wolf's Eyes.m4a
+56:Metal/Elvenking/Era/08 Forget-Me-Not.m4a
+57:Metal/Elvenking/Era/09 Poor Little Baroness.m4a
+58:Metal/Elvenking/Era/11 Chronicle of a Frozen Era.m4a
+59:Metal/Elvenking/Red Silent Tides/1-01 Dawnmelting.m4a
+60:Metal/Elvenking/Red Silent Tides/1-02 The Last Hour.m4a
+61:Metal/Elvenking/Red Silent Tides/1-03 Silence De Mort.m4a
+62:Metal/Elvenking/Red Silent Tides/1-04 The Cabal.m4a
+63:Metal/Elvenking/Red Silent Tides/1-06 Possession.m4a
+64:Metal/Elvenking/Red Silent Tides/1-07 Your Heroes Are Dead.m4a
+65:Metal/Elvenking/Red Silent Tides/1-09 This Nightmare Will Never End.m4a
+66:Metal/Elvenking/Red Silent Tides/1-10 What's Left of Me.m4a
+67:Metal/Elvenking/Red Silent Tides/1-11 The Play of the Leaves.m4a
+68:Metal/Elvenking/The Pagan Manifesto/02 King of the Elves.m4a
+69:Metal/Elvenking/The Pagan Manifesto/03 Elvenlegions.m4a
+70:Metal/Elvenking/The Scythe/07 The Divided Heart.m4a
+71:Metal/Elvenking/The Winter Wake/01 Trows Kind.m4a
+72:Metal/Elvenking/The Winter Wake/03 The Winter Wake.mp3
+73:Metal/Elvenking/The Winter Wake/06 On the Morning Dew.m4a
+74:Metal/Elvenking/The Winter Wake/13 Petalstorm.m4a
+75:Metal/Elvenking/Two Tragedy Poets... And a Caravan of Weird Figures/02 Another Awful Hobs Tale.m4a
+76:Metal/Elvenking/Two Tragedy Poets... And a Caravan of Weird Figures/03 From Blood to Stone.m4a
+77:Metal/Elvenking/Two Tragedy Poets... And a Caravan of Weird Figures/06 The Winter Wake (acoustic version).m4a
+78:Metal/Elvenking/Two Tragedy Poets... And a Caravan of Weird Figures/07 Heaven Is a Place on Earth.m4a
+79:Rock/Five Finger Death Punch/The Wrong Side of Heaven and the Righteous Side of Hell, Volume 2/04 Battle Born.m4a
+80:Metal/Galneryus/BEST-R/05 Destiny.ogg
+81:Pop/Green Day - Holiday.ogg
+82:Rock/Green Day/04 Boulevard of Broken Dreams.m4a
+83:Rock/Guns N' Roses/November Rain/01 November Rain.m4a
+84:J-Whatever/IA - A Tale of Six Trillion Years and a Night.ogg
+85:J-Whatever/Hatsune Miku & Yukari Yuzuki - The Black Wings【黒いつばさ】.ogg
+86:J-Whatever/Imperial Circus Dead Decadence/狂おしく咲いた凄惨な骸は奏で、愛おしく裂いた少女は聖餐の詞を謳う。/10 謳.m4a
+87:J-Whatever/Imperial Circus Dead Decadence/腐蝕ルサンチマン、不死欲の猿楽座。/01 腐蝕ルサンチマン、不死欲の猿楽座。.m4a
+88:J-Whatever/Imperial Circus Dead Decadence/黄泉より聴こゆ、皇国の燈と焔の少女。/01 黄泉より聴こゆ、皇国の燈と焔の少女。.m4a
+89:Metal/Iron Maiden/Somewhere in Time/02 Wasted Years.m4a
+90:Metal/Iron Maiden/Fear Of The Dark/06 Wasting Love.m4a
+91:Metal/Jupiter/Blessing of the Future/01 Blessing of the Future.ogg
+92:Metal/Jupiter/The History of Genesis/03 The Birth of Venus.ogg
+93:Rock/KISS/Hot in the Shade/07 Forever.m4a
+94:Pop/Lady Gaga/The Fame/03 Paparazzi.m4a
+95:Pop/Lady Gaga/The Fame/06 Poker Face.m4a
+96:Pop/Lady Gaga/The Fame Monster/1-01 Lady Gaga - Bad Romance.m4a
+97:Pop/Lady Gaga/Born This Way/01 Marry the Night.m4a
+98:Pop/Lady Gaga/Born This Way/02 Born This Way.m4a
+99:Pop/Lady Gaga/Born This Way/04 Judas.m4a
+100:Pop/Lady Gaga/Joanne/07 Million Reasons.m4a
+101:J-Whatever/Last Note./first trip/14 Last Note. feat. GUMI - キャラメルヘヴン.m4a
+102:Rock/Linking Park/Living Things/12 Powerless.m4a
+103:Pop/Meg & Dia - Monster.ogg
+104:Metal/Metallica/1-05 Wherever I May Roam.m4a
+105:J-Whatever/MONKEY MAJIK/01 Sunshine.m4a
+106:Pop/Nena/Irgendwie, irgendwo, irgendwann/01 Irgendwie, irgendwo, irgendwann.m4a
+107:Pop/O-Zone - Dragostea Din Tei.ogg
+108:Metal/Persuader/When Eden Burns/01 Twisted Eyes.m4a
+109:Nacional/Vários Artistas/Vibe Sound Coca-Cola/03 Admirável Chip Novo.wma.m4a
+110:Metal/Rammstein/Du hast/01 Du hast.m4a
+111:Metal/Rammstein/01 Ich tu dir weh (radio edit).m4a
+112:J-Whatever/REOL/Σ/2-02 宵々古今.m4a
+113:Rock/Rise Against/Appeal to Reason/11 Savior.m4a
+114:Rock/Rise Against/Endgame/05 Satellite.m4a
+115:Rock/Scorpions/Love at First Sting/09 Still Loving You.m4a
+116:Rock/Slipknot/All Hope Is Gone/11 Snuff.mp3
+117:Metal/Stratovarius/Black Diamond: The Anthology/12 Hunting High And Low.m4a
+118:Metal/Stratovarius/Visions/02 Black Diamond.m4a
+119:Metal/Stratovarius/Destiny/01 Destiny.m4a
+120:Metal/Stratovarius/Elysium/09 Elysium.m4a
+121:Metal/The Devil Wears Prada/Space EP/05 Supernova.m4a
+122:Pop/04 Tristam & Braken - Frame of Mind.m4a
+123:J-Whatever/UVERworld/LIFE 6 SENSE/1-01 CORE PRIDE.m4a
+124:Eletrônica/れをる&ギガP/極彩色/06 れをる - ロジックエージェント.m4a
+125:J-Whatever/伊東歌詞太郎/ホシアイ.m4a
+126:J-Whatever/伊東歌詞太郎/百火繚乱.m4a
+127:J-Whatever/05 マイ・ディア・ガール.m4a
+128:J-Whatever/μ’s/Angelic Angel : Hello, 星を数えて/02 星空凛(CV.飯田里穂)、西木野真姫(CV.Pile)、小泉花陽(CV.久保ユリカ) - Hello, 星を数えて.mp3
+playlist_end

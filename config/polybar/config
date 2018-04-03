@@ -1,0 +1,153 @@
+[colors] ; Palette settings
+	background		= #111		; Background
+	middleground	= #646464	; Background text
+	foreground		= #abefab	; Foreground text
+	selected		= #2e2		; Selected foreground text
+	unselected		= #6a6		; Not selected foreground text
+
+[module/clock]
+	type		= internal/date
+	interval 	= 1 ; TODO: Maybe change this later
+
+	time		= "%H:%M"
+	label 		= "%{F#5ff}%{F-} %time%" 
+
+[module/i3]
+	type = internal/i3
+
+	format = <label-state> <label-mode>
+	index-sort = true
+	wrapping-scroll = true
+	strip-wsnumbers = true
+	pin-workspaces = true
+
+	label-focused-background = #201340
+	label-focused-underline  = #302350
+	label-focused-foreground = #55ffff
+	label-focused-underline-size = 4
+
+	label-focused-padding    = 2
+	label-unfocused-padding  = 2
+
+	; Workaround for centering full-width icon characters properly
+	label-focused   = "%name%"
+	label-unfocused = "%name%" 
+
+[module/mem]
+	type = internal/memory
+	interval = 1
+
+	label = "%{F#5ff}%{F-} %percentage_used%%"
+
+	format-padding		= 2
+	#format-background	= #dd08361c
+	#format-underline	= #029f3a
+
+[module/window_title]
+	type = internal/xwindow
+
+	label-maxlen   = 60
+	label-ellipsis = true
+
+	format-underline = #5ff
+	format-padding = 2
+
+[module/music]
+	type = internal/mpd
+
+	format-online-padding = 2
+
+	#format-online-background = #dd2f1856
+	format-online = %{F#5ff}%{F-} <label-song> <label-time> <icon-prev> <toggle> <icon-next>
+
+	#format-online-underline = #641bd5
+	#format-online-overline  = #641bd5
+
+	label-song = %title%, by %artist%
+	label-time = (%elapsed% / %total%)
+	; Icons
+	icon-play  = %{F#fff}%{F-}
+	icon-pause = %{F#fff}%{F-}
+	icon-prev  = %{F#fff}%{F-}
+	icon-next  = %{F#fff}%{F-}
+
+	; Progress bar settings
+	bar-progress-width = 20
+	bar-progress-empty = －
+	bar-progress-fill  = －
+	bar-progress-indicator = ◉
+
+[module/wifi-essid-wlp6s0]
+	type = internal/network
+	interface = wlp6s0
+
+	format-connected-padding	= 2
+	#format-connected-underline  = #03052f
+	#format-connected-background = #dd13154f
+
+	label-connected = %{F#5ff}%{F-} %essid%
+
+[module/wifi-addr-wlp6s0]
+	type = internal/network
+	interface = wlp6s0
+
+	format-connected-padding = 2
+	
+	label-connected = %{F#5ff}%{F-} %local_ip%
+
+[bar/base]
+	monitor = DVI-I-1
+
+	height=32
+
+	background = #dd0a0812
+	foreground = #fcfdff
+
+	; Always favor absolute center over relative center
+	fixed-center = true
+
+	; Create the illusion of bar offset by
+	; adding an invisible border
+	#border-left-size = 10%
+	#border-right-size = 10%
+
+	border-color = #0000
+
+	; Font settings
+	font-0 = xos4 Terminus:size=9:style=bold;2
+	font-1 = FontAwesome:size=9;2
+	font-2 = WunconSiji:size=9;2
+	font-3 = Noto Sans:size=9;2
+	font-4 = Noto Sans Mono CJK JP:size=9;2
+
+	padding = 2
+
+	module-margin 	= 1%
+
+#[bar/top]
+#	inherit = bar/base
+#	border-top-size = 6
+#
+#	bottom = false
+#
+#	modules-left  	= 
+#	modules-center	= window_title
+#	modules-right	= wifi-wlp6s0 mem clock
+
+[bar/bottom]
+	inherit = bar/base
+#	border-bottom-size = 6
+
+	bottom = true
+
+	modules-left = i3
+	modules-center = window_title 
+	modules-right = music wifi-essid-wlp6s0 wifi-addr-wlp6s0 mem clock
+
+	underline-size  = 2
+	underline-color = #2a2832
+	overline-size   = 2
+	overline-color  = #2a2832
+
+	#border-top-size  = 2
+	#border-top-color = #1a1832

@@ -1,3 +1,0 @@
-#!/bin/bash
-# Sending SIGUSR1 will prompt the init to poweroff
-kill -SIGUSR1 1

@@ -1,0 +1,133 @@
+#!/usr/bin/python
+# vim: foldmethod=marker:foldlevel=0
+
+import sys
+active_color   = sys.argv[1]
+inactive_color = sys.argv[2] 
+
+# Color settings
+USE_COLOR = False 
+COLOR_MODE = "text" # either "border" (gaps-only) or "text"
+
+COLOR_TIME    = "#82AAFF"
+COLOR_DATE    = "#AAAAAA"
+COLOR_NETWORK = "#89DDFF"
+COLOR_AUDIO   = "#80CBC4"
+COLOR_MEMORY  = "#8BD649"
+COLOR_CPU     = "#FFCC00"
+COLOR_MUSIC   = "#EA9560"
+
+# Color implementation
+# {{{
+def add_colored_border(output, color):
+    if USE_COLOR:
+        if COLOR_MODE == "border":
+            output["border"] = color
+            
+            output["border_bottom"] = 2
+            output["border_top"]   = 0
+            output["border_left"]  = 0
+            output["border_right"] = 0
+        elif COLOR_MODE == "text":
+            output["color"] = color
+
+from i3pystatus.clock import Clock
+class ClockColored(Clock):
+    def run(self):
+        super(ClockColored, self).run()
+        add_colored_border(self.output, COLOR_TIME)
+
+class DateColored(Clock):
+    def run(self):
+        super(DateColored, self).run()
+        add_colored_border(self.output, COLOR_DATE)
+
+from i3pystatus.network import Network
+class NetworkColored(Network):
+    def run(self):
+        super(NetworkColored, self).run()
+        add_colored_border(self.output, COLOR_NETWORK)
+
+from i3pystatus.alsa import ALSA
+class ALSAColored(ALSA):
+    def run(self):
+        super(ALSAColored, self).run()
+        add_colored_border(self.output, COLOR_AUDIO)
+
+from i3pystatus.mem import Mem
+class MemColored(Mem):
+    def run(self):
+        super(MemColored, self).run()
+        add_colored_border(self.output, COLOR_MEMORY)
+
+from i3pystatus.cpu_usage import CpuUsage
+class CpuUsageColored(CpuUsage):
+    def run(self):
+        super(CpuUsageColored, self).run()
+        add_colored_border(self.output, COLOR_CPU)
+
+
+from i3pystatus.mpd import MPD
+class MpdColored(MPD):
+    def run(self):
+        super(MpdColored, self).run()
+        add_colored_border(self.output, COLOR_MUSIC)
+# }}}
+
+# Status config
+from i3pystatus import Status
+status = Status(standalone = True)
+
+status.register(ClockColored, format = "%R")
+status.register(DateColored,  format = "%a, %d de %b")
+status.register(
+    NetworkColored, 
+    interface   = "wlp6s0",
+    format_up   = "{v4}[ @ {essid}]",
+    format_down = "w: down",
+
+    color_up   = "#" + active_color,
+    color_down = "#" + inactive_color,
+
+    on_doubleleftclick = ["nm-applet"],
+    on_leftclick  = [],
+    on_rightclick = [],
+    on_upscroll   = [],
+    on_downscroll = [],
+)
+
+status.register(
+    ALSA,
+    format = "vol: {volume}%",
+    format_muted = "vol: mute",
+    color_muted  = "#" + inactive_color,
+
+    on_leftclick = [],
+    on_doubleleftclick = ["~/.desktop/terminal --command=/usr/bin/alsamixer"],
+    on_upscroll = [], on_downscroll = []
+)
+
+status.register(
+    MemColored, 
+    format = "mem: {percent_used_mem}%",
+    divisor = 1073741824,
+    round_size = 1,
+
+    color = "#" + active_color,
+    warn_color = "#" + active_color,
+)
+
+status.register(CpuUsageColored, format = "cpu: {usage}%")
+
+status.register(MpdColored,
+    format = "[{status} {song_elapsed}/{song_length}  {title}[, by {artist}]]",
+
+    on_doubleleftclick = ["~/.desktop/terminal --command=/usr/bin/ncmpcpp"],
+
+    on_leftclick  = [],
+    on_rightclick = [],
+    on_upscroll   = [],
+    on_downscroll = []
+)
+
+status.run()

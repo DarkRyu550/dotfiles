@@ -1,5 +1,0 @@
-#!/bin/bash
-
-# Create /run files
-echo "lock: creating file structure"
-mkdir -p /run/lock

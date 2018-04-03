@@ -1,0 +1,220 @@
+###############
+## Modifiers ##
+###############
+#General
+set $mod  Mod4
+# Media
+set $mmod Mod1
+
+#############
+## Outputs ##
+#############
+set $out_center DVI-I-1
+set $out_left   HDMI-0
+
+################
+## Workspaces ##
+################
+set $wsc1 1:term
+set $wsc2 2:web
+set $wsc3 3:code
+set $wsc4 4:games
+set $wsc5 5:vm
+set $wsc6 6:tor
+set $wsc7 7
+set $wsc8 8
+set $wsc9 9:pr0n
+
+set $wsl1 11:music
+
+workspace "$wsc1" output $out_center
+workspace "$wsl1" output $out_left
+
+##########
+## Gaps ##
+##########
+gaps inner 64
+gaps outer 0
+
+#smart_gaps on
+smart_borders no_gaps
+
+################
+## Appearance ##
+################
+
+# Remove window borders
+new_window pixel 0
+new_float  pixel 0
+
+font pango:xos4 Terminus Regular 9 
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #AA00AA #263238 #CDD3DE #CDD3DE #AA00AA 
+client.focused_inactive #37474F #263238 #707880 #707880 #37474F 
+client.unfocused        #37474F #263238 #707880 #707880 #37474F 
+client.urgent           #EC5F67 #263238 #CDD3DE #EA9560 #EA9560
+
+client.background #263238
+
+# Moved to polybar, see ~/.config/polybar/config
+#
+#bar {
+#	#output $out_center	
+#	height 22
+#	i3bar_command i3bar -t
+#	position top
+#	#tray_output primary
+#	status_command python ~/.config/i3/status_config.py c9ccd3 707880  
+#	
+#	font pango:Noto Mono Regular 10
+#	strip_workspace_numbers yes
+#	separator_symbol "//"
+#	colors{
+#		background #130a24c0
+#		statusline #c9ccd3
+#		
+#		focused_workspace  #130a24 #130a24 #c9ccd3 
+#		inactive_workspace #130a24 #130a24 #707880 
+#		active_workspace   #130a24 #130a24 #c9ccd3
+#		urgent_workspace   #ec5f67 #ec5f67 #130a24
+#	}
+#}
+
+
+#################
+## Keybindings ##
+#################
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# Launchers ##
+# Terminal
+bindsym $mod+Return exec ~/.desktop/terminal
+
+# Close focused window
+bindsym $mod+q kill
+
+# Rofi along with its settings
+bindsym $mod+space exec dmenu_run -fn xos4\ Terminus -nb \#0a0812 -sb \#201340 -nf \#c9ccd3 -sf \#55ffff
+
+## WM Actions ##
+
+# Lock screen
+bindsym $mod+l exec ~/.desktop/lock
+
+# Change focused window
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Move focused window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Split container
+bindsym $mod+h split h
+bindsym $mod+v split v 
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+Tab floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+Tab focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# switch to workspace
+bindsym $mod+1 workspace "$wsc1"
+bindsym $mod+2 workspace "$wsc2"
+bindsym $mod+3 workspace "$wsc3"
+bindsym $mod+4 workspace "$wsc4"
+bindsym $mod+5 workspace "$wsc5"
+bindsym $mod+6 workspace "$wsc6"
+bindsym $mod+7 workspace "$wsc7"
+bindsym $mod+8 workspace "$wsc8"
+bindsym $mod+9 workspace "$wsc9"
+bindsym $mod+0 workspace 10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace "$wsc1"
+bindsym $mod+Shift+2 move container to workspace "$wsc2"
+bindsym $mod+Shift+3 move container to workspace "$wsc3"
+bindsym $mod+Shift+4 move container to workspace "$wsc4"
+bindsym $mod+Shift+5 move container to workspace "$wsc5" 
+bindsym $mod+Shift+6 move container to workspace "$wsc6"
+bindsym $mod+Shift+7 move container to workspace "$wsc7"
+bindsym $mod+Shift+8 move container to workspace "$wsc8"
+bindsym $mod+Shift+9 move container to workspace "$wsc9" 
+bindsym $mod+Shift+0 move container to workspace 10
+
+# Restart i3
+bindsym $mod+Shift+r restart
+
+# Exit i3
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Log out?' -b 'ye' 'i3-msg exit'"
+
+bindsym $mod+r mode "resize"
+# resize window (you can also use the mouse for that)
+mode "resize" {
+	bindsym Left resize grow width 10 px or 10 ppt
+	bindsym Down resize shrink height 10 px or 10 ppt
+	bindsym Up resize grow height 10 px or 10 ppt
+	bindsym Right resize shrink width 10 px or 10 ppt
+
+	# back to normal: Enter or Escape
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+
+## Music playback controls ##
+bindsym $mmod+q exec mpc toggle
+bindsym $mmod+w exec mpc stop
+bindsym $mmod+1 exec mpc cdprev
+bindsym $mmod+2 exec mpc next
+bindsym $mmod+a exec mpc volume -5
+bindsym $mmod+s exec mpc volume +5
+bindsym $mmod+m exec ~/.desktop/terminal -e 'alsamixer'
+
+## Screenshot ##
+bindsym Shift+Print	exec scrot -s '%F_%H-%M-%S_$wx$h.png' -e 'mv $f ~/images/screenshot'
+bindsym Print 		exec scrot    '%F_%H-%M-%S_$wx$h.png' -e 'mv $f ~/images/screenshot'
+bindsym Mod1+Print	exec scrot -u '%F_%H-%M-%S_$wx$h.png' -e 'mv $f ~/images/screenshot'
+
+###################
+## Special Rules ##
+###################
+for_window [class="MPlayer"] floating enable
+for_window [class="sddm-greeter"] floating enable
+for_window [class="feh"] floating enable
+
+##############
+## Autoexec ##
+##############
+exec /usr/bin/lxqt-policykit-agent
+
+# Monitor setup
+exec /usr/bin/xrandr --output DVI-I-1 --right-of HDMI-0 --mode 1920x1080 --primary --output HDMI-0 --mode 1360x768 
+
+# Deskop setup
+exec_always --no-startup-id ~/.config/i3/bar
+exec /usr/bin/compton --config .config/compton.conf
+exec ~/.fehbg 
+exec /usr/bin/dunst
+exec /usr/bin/mpd
+exec ~/.local/bin/mpdnotify start

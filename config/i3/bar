@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Get rid of any old bars
+killall polybar
+
+# Start both top and bottom bars and wait for them to exit
+polybar top $@ &
+TOP=$!
+
+polybar bottom $@ &
+BOT=$!
+
+wait $TOP
+wait $BOT

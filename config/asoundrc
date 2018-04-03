@@ -1,0 +1,65 @@
+
+pcm.hdmi_dmix {
+	type plug
+	slave.pcm "dmix:CARD=NVidia,DEV=3,RATE=48000"
+}
+
+pcm.pch_dmix {
+	type plug
+	slave.pcm "dmix:CARD=PCH,RATE=48000"
+}
+
+pcm.distribute {
+	type route
+	slave.pcm {
+		type multi
+		slaves.a{
+			pcm "pch_dmix"
+			
+			#rate 48000
+			#period_time 0
+			#period_size 1024
+			#buffer_size 4096
+
+		}
+		slaves.b{
+			pcm "hdmi_dmix"
+			
+			#rate 48000
+			#period_time 0
+			#period_size 1024
+			#buffer_size 4096
+		}
+
+
+		slaves.a.channels 2
+		slaves.b.channels 2
+
+		bindings.0 { slave a; channel 0; }
+		bindings.1 { slave a; channel 1; }
+		bindings.2 { slave b; channel 0; }
+		bindings.3 { slave b; channel 1; }
+	}
+
+	ttable{
+		0.0 1
+		1.1 1
+		0.2 1
+		1.3 1
+	}
+}
+
+pcm.asymed {
+	type asym
+	playback.pcm "distribute"
+	capture.pcm	"dsnoop:CARD=PCH,RATE=48000"
+}
+
+pcm.!default {
+	type plug
+	slave{
+		pcm "asymed"
+		rate 48000
+		format S16_LE
+	}
+}

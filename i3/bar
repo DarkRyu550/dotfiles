@@ -1,9 +1,0 @@
-#!/bin/bash
-polybar top $@ &
-TOP=$!
-
-polybar bottom $@ &
-BOT=$!
-
-wait $TOP
-wait $BOT

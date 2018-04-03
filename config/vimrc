@@ -1,0 +1,51 @@
+set tabstop=4
+set number
+set autoindent
+
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim' " Automanagement
+" Plugin 'Valloric/YouCompleteMe'
+Plugin 'rust-lang/rust.vim'
+Plugin 'peterhoeg/vim-qml'
+Plugin 'cespare/vim-toml'
+
+call vundle#end()
+
+syntax on 
+filetype plugin indent on
+
+" Load color scheme
+set t_Co=256
+colo dracula
+
+" Set backgound to be transparent
+"hi Normal ctermbg=none
+"highlight NonText ctermbg=none
+
+" Statusline
+set laststatus=2
+function! ApplyStatuslineColor(mode)
+		if a:mode == 'i'
+				hi statusline ctermbg=57  ctermfg=white
+		elseif a:mode == 'r'
+				hi statusline ctermbg=darkmagenta ctermfg=white
+		else
+				hi statusline ctermbg=darkgreen ctermfg=white 
+		endif
+endfunction
+
+au InsertEnter * call ApplyStatuslineColor(v:insertmode)
+au InsertLeave * hi statusline ctermbg=darkgray ctermfg=white
+
+hi statusline ctermbg=darkgray ctermfg=white
+
+set statusline=%f									" Filename
+set statusline+=\ %{strlen(&fenc)?&fenc:'none'},	" Encoding
+set statusline+=\ %{&ff}							" Format
+set statusline+=\ %y								" Filetype
+set statusline+=\ %h								" Help file flag
+set statusline+=\ %m								" Modified flag
+set statusline+=\ %r								" Readonly flag

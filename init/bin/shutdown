@@ -1,3 +1,0 @@
-#!/bin/bash
-# Sending SIGINT will prompt the init to do a fake reboot
-kill -SIGINT 1
